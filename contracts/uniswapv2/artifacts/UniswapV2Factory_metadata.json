@@ -1,0 +1,522 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_feeToSetter",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "coinAddress",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token0",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token1",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "pair",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "PairCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allPairs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "allPairsLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "alphaRegular",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "alphaTopCoin",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "betaRegular",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "betaTopCoin",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "createPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pair",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeTo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feeToSetter",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "getPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "migrator",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pairCodeHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_feeTo",
+						"type": "address"
+					}
+				],
+				"name": "setFeeTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_feeToSetter",
+						"type": "address"
+					}
+				],
+				"name": "setFeeToSetter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_migrator",
+						"type": "address"
+					}
+				],
+				"name": "setMigrator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_totalFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alpha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_beta",
+						"type": "uint256"
+					}
+				],
+				"name": "setRegularCoinFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_coinAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"name": "setTopCoin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_totalFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alpha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_beta",
+						"type": "uint256"
+					}
+				],
+				"name": "setTopCoinFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "topCoins",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalFeeRegular",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalFeeTopCoin",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token0",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "token1",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_totalFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_alpha",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_beta",
+						"type": "uint256"
+					}
+				],
+				"name": "updatePairFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"uniswapv2/UniswapV2Factory.sol": "UniswapV2Factory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"uniswapv2/UniswapV2ERC20.sol": {
+			"keccak256": "0x5416a16613922026093862ff5b784d7957b932459d78f52aff76bc77766c89c2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5de0cb3eb87e2db48d6e707c3dd209878938716d674481f64fce19439267c19",
+				"dweb:/ipfs/QmUq1fB4GCT7TZkWgaRj3NEDYsWeex6tZmVCm521eY3o41"
+			]
+		},
+		"uniswapv2/UniswapV2Factory.sol": {
+			"keccak256": "0x9ab6c5cf073c7752ab0f34d5fd73b82456e7896d2299846c29dd8ba525e33d09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d20a602a9e814cd0d834249bccfba960242205b7ff17c0bafc7ee6de55141710",
+				"dweb:/ipfs/QmU5jtt975tV56jfqzMs8iEHZ1wdesmYg3rwVDsKzmbxDY"
+			]
+		},
+		"uniswapv2/UniswapV2Pair.sol": {
+			"keccak256": "0x1e671cfe135b8f245757c18d03a6161254350124f0c3d46f290f9e6fa9901310",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://504f814a11c3b32fb92b5974ece6c1f1b414bfc0007f4f7e0433ac5eea6acf0d",
+				"dweb:/ipfs/QmbjnrKcMB5ffVT7a9nAvUqz8vvxJJ6ANVRyasyoyn6Gco"
+			]
+		},
+		"uniswapv2/interfaces/IERC20.sol": {
+			"keccak256": "0xd162c1e677bf3cef1f6545424f534ed03b3c18a344a84e8018a7dde6845e2228",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e044aa63353fc8343d5439e89fae115e57f44046c0af6bb5d5ec52b954f6f153",
+				"dweb:/ipfs/QmXMd5Cyuae4VDeWcPU8HkD6rSXs5nhzuETBwC7A6X4SR1"
+			]
+		},
+		"uniswapv2/interfaces/IUniswapV2Callee.sol": {
+			"keccak256": "0x79196c4a34a6c01d788306dcbf17de204bf44a37ade02bf700ed36b2a8a43cfc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4c77caa0569a46586875a18ea5e396c0d002bac42782a804be9d66688a1d2fa8",
+				"dweb:/ipfs/QmXMzFGo2rCUr9NRmCEn8WbunJLxJpA4u414X3GmTQxoRd"
+			]
+		},
+		"uniswapv2/interfaces/IUniswapV2Factory.sol": {
+			"keccak256": "0x5982b576634c70d70ba72ba912334fe6f5cac43d2ccd3968bf89d775dd823d21",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cebef54c3d75881a3bf75f90258eb244b5ed465a424623b386726eb933f67ca6",
+				"dweb:/ipfs/QmXkHUD4GGCCc612kEs4rRyxFPj6utUL4BtVLUTNGrgtpc"
+			]
+		},
+		"uniswapv2/libraries/Math.sol": {
+			"keccak256": "0x3deefa2e68b976d1c143ad9dbdf1ed8150bf7dc9336da925e77f8f764b753c43",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f77c76d29b1b845899b6e2ac5c54e6eba95ed1200778d5ef93bd99e4e7a8ff0e",
+				"dweb:/ipfs/QmeThEL69R1CPaffsGs3JRvezUSW1ACpE9XVbRPGhFpBY8"
+			]
+		},
+		"uniswapv2/libraries/SafeMath.sol": {
+			"keccak256": "0x657933e8d759d3a7757bb26b58dade55570128dedc420c80c69366abaf84443c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cdde22514a2d5de16eb8c866439d4c568c1e2419b66ce0288ba278916f3d4077",
+				"dweb:/ipfs/QmbCbvjTUXnm2PKPUSxMJQubHFzaEVSRQS4sCEAPLrtCTq"
+			]
+		},
+		"uniswapv2/libraries/UQ112x112.sol": {
+			"keccak256": "0xd389732bb53cd430dd075b5135db26c77002e898ba1413c6c018335548e97b76",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://12f428a21bec2cfe4134c235e4daefb466558579d4031c1a24d3b99dd4dff5c6",
+				"dweb:/ipfs/QmeVfF6Sf5ojozudciuKykkGLsY1nYnHWzgB9Yps7oq4Mf"
+			]
+		}
+	},
+	"version": 1
+}
