@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity 0.6.12;
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
+pragma solidity >0.6.12;
+import "shibaswap/artifacts/@openzeppelin/contracts/access/Ownable.sol";
+import "shibaswap/artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "shibaswap/artifacts/@openzeppelin/contracts/math/SafeMath.sol";
 // BoneToken locker contract.
 contract BoneLocker is Ownable {
     using SafeMath for uint256;
