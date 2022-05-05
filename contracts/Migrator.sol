@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >0.6.12;
+pragma solidity 0.6.12;
 
 import "./uniswapv2/interfaces/IUniswapV2Pair.sol";
 import "./uniswapv2/interfaces/IUniswapV2Factory.sol";
@@ -11,7 +11,7 @@ contract Migrator {
     address public oldFactory;
     IUniswapV2Factory public factory;
     uint256 public notBeforeBlock;
-    uint256 public desiredLiquidity = type(uint256).min;
+    uint256 public desiredLiquidity = uint256(-1);
 
     constructor(
         address _chef,
@@ -41,7 +41,7 @@ contract Migrator {
         orig.transferFrom(msg.sender, address(orig), lp);
         orig.burn(address(pair));
         pair.mint(msg.sender);
-        desiredLiquidity = type(uint256).min;
+        desiredLiquidity = uint256(-1);
         return pair;
     }
 }

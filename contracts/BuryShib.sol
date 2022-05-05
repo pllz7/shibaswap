@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >0.6.12;
+pragma solidity 0.6.12;
 
-import "shibaswap/artifacts/@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "shibaswap/artifacts/@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "shibaswap/artifacts/@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 // BuryShib is the coolest pit in town. You come in with some Shib, and leave with more! The longer you stay, the more Shib you get.
 //

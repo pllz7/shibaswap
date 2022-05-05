@@ -2,7 +2,7 @@
 // Audit on 5-Jan-2021 by Keno and BoringCrypto
 
 // P1 - P3: OK
-pragma solidity >0.6.12;
+pragma solidity 0.6.12;
 
 // Source: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol + Claimable.sol
 // Edited by BoringCrypto
@@ -20,7 +20,7 @@ contract BoringOwnable is BoringOwnableData {
     // E1: OK
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
-    constructor () {
+    constructor () internal {
         owner = msg.sender;
         emit OwnershipTransferred(address(0), msg.sender);
     }

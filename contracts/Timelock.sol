@@ -11,10 +11,10 @@
 // Ctrl+f for XXX to see all the modifications.
 
 // XXX: pragma solidity ^0.5.16;
-pragma solidity >0.6.12;
+pragma solidity 0.6.12;
 
 // XXX: import "./SafeMath.sol";
-import "shibaswap/artifacts/@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract Timelock {
     using SafeMath for uint;

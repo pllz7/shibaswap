@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // P1 - P3: OK
-pragma solidity >0.6.12;
+pragma solidity 0.6.12;
 import "./libraries/BoringMath.sol";
 import "./libraries/BoringERC20.sol";
 
