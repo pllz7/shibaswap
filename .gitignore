@@ -107,3 +107,7 @@ dist
 .vscode
 .idea
 .DS_Store
+
+# Buidler files
+cache
+artifacts
