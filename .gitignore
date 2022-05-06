@@ -10,10 +10,4 @@ package-lock.json
 coverage/
 coverage.json
 .env
-/.idea/.gitignore
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/shibaswapv1.iml
-/.idea/vcs.xml
-/.idea/workspace.xml
-/yarn.lock
+.idea
