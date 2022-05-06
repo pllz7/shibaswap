@@ -1,6 +1,10 @@
 # ShibaSwap
 
-
+```bash
+nvm use
+yarn install
+yarn run build
+```
 
 ## Deployed Contracts
 
