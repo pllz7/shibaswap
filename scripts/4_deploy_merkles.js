@@ -54,77 +54,77 @@ async function main() {
     console.log(`daiMerkleDistributorDeployed contract address: ${daiMerkleDistributorDeployed.address}`);
     console.log(`tBoneBoneMerkleDistributorDeployed contract address: ${tBoneBoneMerkleDistributorDeployed.address}`);
     sleep(10000);
-    await run("verify:verify", {
-        constructorArguments: [
-            BONE[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-          ],
-        contract: "contracts/merkleDistributors/xShibBoneMerkleDistributor.sol:xShibBoneMerkleDistributor",
-        address: xShibBoneMerkleDistributorDeployed.address
-      });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         BONE[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //       ],
+    //     contract: "contracts/merkleDistributors/xShibBoneMerkleDistributor.sol:xShibBoneMerkleDistributor",
+    //     address: xShibBoneMerkleDistributorDeployed.address
+    //   });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            BONE[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/xLeashBoneMerkleDistributor.sol:xLeashBoneMerkleDistributor",
-        address: xLeashBoneMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         BONE[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/xLeashBoneMerkleDistributor.sol:xLeashBoneMerkleDistributor",
+    //     address: xLeashBoneMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            WETH[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/wethMerkleDistributor.sol:wethMerkleDistributor",
-        address: wethMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         WETH[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/wethMerkleDistributor.sol:wethMerkleDistributor",
+    //     address: wethMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            WBTC[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/wbtcMerkleDistributor.sol:wbtcMerkleDistributor",
-        address: wbtcMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         WBTC[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/wbtcMerkleDistributor.sol:wbtcMerkleDistributor",
+    //     address: wbtcMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            USDC[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/usdcMerkleDistributor.sol:usdcMerkleDistributor",
-        address: usdcMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         USDC[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/usdcMerkleDistributor.sol:usdcMerkleDistributor",
+    //     address: usdcMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            USDT[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/usdtMerkleDistributor.sol:usdtMerkleDistributor",
-        address: usdtMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         USDT[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/usdtMerkleDistributor.sol:usdtMerkleDistributor",
+    //     address: usdtMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            BONE[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/tBoneBoneMerkleDistributor.sol:tBoneBoneMerkleDistributor",
-        address: tBoneBoneMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         BONE[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/tBoneBoneMerkleDistributor.sol:tBoneBoneMerkleDistributor",
+    //     address: tBoneBoneMerkleDistributorDeployed.address
+    // });
 
-    await run("verify:verify", {
-        constructorArguments: [
-            DAI[chainId].address,
-            "0x0000000000000000000000000000000000000000000000000000000000000000"
-        ],
-        contract: "contracts/merkleDistributors/daiMerkleDistributor.sol:daiMerkleDistributor",
-        address: daiMerkleDistributorDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         DAI[chainId].address,
+    //         "0x0000000000000000000000000000000000000000000000000000000000000000"
+    //     ],
+    //     contract: "contracts/merkleDistributors/daiMerkleDistributor.sol:daiMerkleDistributor",
+    //     address: daiMerkleDistributorDeployed.address
+    // });
     
 }
 

@@ -22,14 +22,14 @@ async function main() {
     console.log(factoryAddress, WETH[chainId].address);
     sleep(15000);
 
-    await run("verify:verify", {
-        constructorArguments: [
-            factoryAddress,
-            WETH[chainId].address
-        ],
-        contract: "contracts/uniswapv2/UniswapV2Router02.sol:UniswapV2Router02",
-        address: router.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         factoryAddress,
+    //         WETH[chainId].address
+    //     ],
+    //     contract: "contracts/uniswapv2/UniswapV2Router02.sol:UniswapV2Router02",
+    //     address: router.address
+    // });
 
 }
 

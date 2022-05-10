@@ -26,14 +26,14 @@ async function main() {
     console.log("Waiting");
     sleep(10000);
 
-    await run("verify:verify", {
-        constructorArguments: [
-            deployer.address,
-            [WBTC[chainId].address, USDT[chainId].address, USDC[chainId].address, DAI[chainId].address, WETH[chainId].address]
-          ],
-        contract: "contracts/uniswapv2/UniswapV2Factory.sol:UniswapV2Factory",
-        address: factory.address
-      });
+    // await run("verify:verify", {
+    //     constructorArguments: [
+    //         deployer.address,
+    //         [WBTC[chainId].address, USDT[chainId].address, USDC[chainId].address, DAI[chainId].address, WETH[chainId].address]
+    //       ],
+    //     contract: "contracts/uniswapv2/UniswapV2Factory.sol:UniswapV2Factory",
+    //     address: factory.address
+    //   });
     
 }
 

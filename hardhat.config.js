@@ -28,9 +28,10 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 const { removeConsoleLog } = require("hardhat-preprocessor")
 
 const accounts = {
-  mnemonic: process.env.MNEMONIC || "test test test test test test test test test test test junk",
+  mnemonic: process.env.MNEMONIC || "grant teach mosquito harsh noodle local dry robust jacket drastic come soon",
   accountsBalance: "990000000000000000000",
 }
+
 
 module.exports = {
   abiExporter: {
@@ -40,11 +41,11 @@ module.exports = {
     // only: [],
     // except: []
   },
-  defaultNetwork: "hardhat",
+  defaultNetwork: "rinkeby",
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: "JVY272BDC2WE7S6SACB1CINDX5UTGSC3UX",
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS ? true : false,
@@ -52,36 +53,25 @@ module.exports = {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     excludeContracts: ["contracts/mocks/", "contracts/libraries/"],
   },
-  hardhat: {
+  rinkeby: {
     forking: {
-      url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+      url: `https://eth-mainnet.alchemyapi.io/v2/jqj9gp1jvr-Fi7Hv917xtSpYgVB4JKdt`,
     },
   },
   networks: {
-    hardhat: {
-      chainId: 31337,
-      accounts,
-    },
-    ropsten: {
-      url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
-      accounts,
-      chainId: 3,
-      live: true,
+    rinkeby: {
+       url: `https://rinkeby.infura.io/v3/5ad28388cd4e423683c7eec76592eb10`,
+       chainId: 4,
+       accounts,
+       generate_validators: true,
+       bor_chain_id: 6924,
+       live: true,
       saveDeployments: true,
-    },
-    kovan: {
-      url: `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`,
-      accounts: [],
-      chainId: 42,
-      live: true,
-      saveDeployments: true,
-      tags: ["staging"],
-      gasPrice: 20000000000,
-      gasMultiplier: 2,
-    },
+       gasPrice: 20000000000,
+     },
   },
   preprocess: {
-    eachLine: removeConsoleLog(bre => bre.network.name !== "hardhat" && bre.network.name !== "localhost"),
+    eachLine: removeConsoleLog(bre => bre.network.name !== "rinkeby" && bre.network.name !== "localhost"),
   },
   solidity: {
     version: "0.6.12",

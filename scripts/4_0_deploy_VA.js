@@ -40,21 +40,21 @@ async function main() {
     console.log(`ShibaSushiFetchDeployed contract address: ${ShibaSushiFetchDeployed.address}`);
     sleep(10000);
 
-    await run("verify:verify", {
-        constructorArguments: [UNISWAP_ROUTER_ADDRESS, SHIBASWAP_ROUTER_ADDRESS],
-        contract: "contracts/ShibaUniFetch.sol:ShibaUniFetch",
-        address: ShibaUniFetchDeployed.address
-      });
+    // await run("verify:verify", {
+    //     constructorArguments: [UNISWAP_ROUTER_ADDRESS, SHIBASWAP_ROUTER_ADDRESS],
+    //     contract: "contracts/ShibaUniFetch.sol:ShibaUniFetch",
+    //     address: ShibaUniFetchDeployed.address
+    //   });
 
     console.log("Verified ShibaUniFetch")
 
     sleep(10000);
 
-    await run("verify:verify", {
-        constructorArguments: [SUSHISWAP_ROUTER_ADDRESS, SHIBASWAP_ROUTER_ADDRESS],
-        contract: "contracts/ShibaSushiFetch.sol:ShibaSushiFetch",
-        address: ShibaSushiFetchDeployed.address
-    });
+    // await run("verify:verify", {
+    //     constructorArguments: [SUSHISWAP_ROUTER_ADDRESS, SHIBASWAP_ROUTER_ADDRESS],
+    //     contract: "contracts/ShibaSushiFetch.sol:ShibaSushiFetch",
+    //     address: ShibaSushiFetchDeployed.address
+    // });
 
     console.log("Verified ShibaSushiFetch")
 }
