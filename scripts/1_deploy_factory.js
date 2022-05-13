@@ -13,7 +13,7 @@ async function main() {
     console.log("start delploy");
     const chainId = 42;
     const [deployer, user, devAddr] = await ethers.getSigners();
-    console.log(`Depoying contracts with the account: ${deployer.address} & ${user.address}`); // usr not used
+    console.log(`Depoying contracts with the account: ${deployer.address} `); // usr not used
 
     const balance = await deployer.getBalance();
     console.log(`Account balance: ${balance.toString()}`);

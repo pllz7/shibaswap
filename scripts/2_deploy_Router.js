@@ -11,7 +11,7 @@ function sleep(miliseconds) {
 
 async function main() {
     console.log("start delploy");
-    const factoryAddress = "0x29a4a66F826634df605319f5098aFAFD4FdEe3c8"; // TODO - CHANGETHIS - factory contract address
+    const factoryAddress = "0x0faaBD8108bF8eC46A147087aAe907458aCA6073"; // TODO - CHANGETHIS - factory contract address
     const chainId = 42;
     const [deployer, user, devAddr] = await ethers.getSigners();
 

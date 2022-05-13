@@ -11,10 +11,10 @@ function sleep(miliseconds) {
 
 async function main() {
     console.log("start delploy");
-    const factoryAddress = "0x29a4a66F826634df605319f5098aFAFD4FdEe3c8"; // TODO - CHANGETHIS - factory contract address
+    const factoryAddress = "0x0faaBD8108bF8eC46A147087aAe907458aCA6073"; // TODO - CHANGETHIS - factory contract address
     const bonePerBlock = "100000000000000000000", startBlock =  "25424809", bonusEndBlock = "25469167";
     const lockingPeriodInBoneLocker = 3, devLockingPeriodInBoneLocker = 1;
-    const devWallet = "0x3370CeC87C20D67a2695ceA90D7247031928F9Ca", marketingWallet = "0x97325b5E3de52877B16327ECD625678Ed37AcC30", adminWallet = "0xdb45479f95aB1e45edaCc60CC2Fec76bBd90B3c8";
+    const devWallet = "0x3370CeC87C20D67a2695ceA90D7247031928F9Ca", marketingWallet = "0x97325b5E3de52877B16327ECD625678Ed37AcC30", adminWallet = "0xc1B422ba76726fBC6e3ad9BDAF5cB626d5FC84EE";
 
     const chainId = 42;
     const [deployer, user, devAddr] = await ethers.getSigners();
@@ -27,24 +27,24 @@ async function main() {
 
     console.log(`BONE contract address: ${boneToken.address}`);
     sleep(10000);
-    // deploy burry bone
-    const BuryBone = await ethers.getContractFactory('BuryBone');
-    const buryBone = await BuryBone.deploy(boneToken.address);
+    // // deploy burry bone
+    // const BuryBone = await ethers.getContractFactory('BuryBone');
+    // const buryBone = await BuryBone.deploy(boneToken.address);
 
-    console.log(`BuryBone contract address: ${buryBone.address}`);
-    sleep(10000);
-    // deploy burry leash
-    const BuryLeash = await ethers.getContractFactory('BuryLeash');
-    const buryLeash = await BuryLeash.deploy(LEASH[chainId].address);
+    // console.log(`BuryBone contract address: ${buryBone.address}`);
+    // sleep(10000);
+    // // deploy burry leash
+    // const BuryLeash = await ethers.getContractFactory('BuryLeash');
+    // const buryLeash = await BuryLeash.deploy(LEASH[chainId].address);
 
-    console.log(`BuryLeash contract address: ${buryLeash.address}`);
-    sleep(10000);
-    // deploy burry shib
-    const BuryShib = await ethers.getContractFactory('BuryShib');
-    const buryShib = await BuryShib.deploy(SHIBA_INU[chainId].address);
+    // console.log(`BuryLeash contract address: ${buryLeash.address}`);
+    // sleep(10000);
+    // // deploy burry shib
+    // const BuryShib = await ethers.getContractFactory('BuryShib');
+    // const buryShib = await BuryShib.deploy(SHIBA_INU[chainId].address);
 
-    console.log(`BuryShib contract address: ${buryShib.address}`);
-    sleep(10000);
+    // console.log(`BuryShib contract address: ${buryShib.address}`);
+    // sleep(10000);
     // deploy swapRewardDistributor
     const SwapRewardDistributor = await ethers.getContractFactory('SwapRewardDistributor');
     const swapRewardDistributor = await SwapRewardDistributor.deploy();
@@ -55,9 +55,9 @@ async function main() {
     const TreasureFinder = await ethers.getContractFactory('TreasureFinder');
     const treasureFinder = await TreasureFinder.deploy(factoryAddress,
         swapRewardDistributor.address,
-        buryBone.address,
-        buryLeash.address,
-        buryShib.address,
+        // buryBone.address,
+        // buryLeash.address,
+        // buryShib.address,
         boneToken.address,
         SHIBA_INU[chainId].address,
         LEASH[chainId].address,
@@ -66,28 +66,28 @@ async function main() {
     console.log(`TreasureFinder contract address: ${treasureFinder.address}`);
     sleep(10000);
     // deploy tBoneBoneDistributor
-    const tBoneBoneDistributor = await ethers.getContractFactory('tBoneBoneDistributor');
-    const tboneBoneDistributor = await tBoneBoneDistributor.deploy(boneToken.address);
+    // const tBoneBoneDistributor = await ethers.getContractFactory('tBoneBoneDistributor');
+    // const tboneBoneDistributor = await tBoneBoneDistributor.deploy(boneToken.address);
 
-    console.log(`tboneBoneDistributor contract address: ${tboneBoneDistributor.address}`);
-    sleep(10000);
-    // deploy xShibBoneDistributor
-    const xShibBoneDistributor = await ethers.getContractFactory('xShibBoneDistributor');
-    const xshibBoneDistributor = await xShibBoneDistributor.deploy(boneToken.address);
+    // console.log(`tboneBoneDistributor contract address: ${tboneBoneDistributor.address}`);
+    // sleep(10000);
+    // // deploy xShibBoneDistributor
+    // const xShibBoneDistributor = await ethers.getContractFactory('xShibBoneDistributor');
+    // const xshibBoneDistributor = await xShibBoneDistributor.deploy(boneToken.address);
 
-    console.log(`xshibBoneDistributor contract address: ${xshibBoneDistributor.address}`);
-    sleep(10000);
-    // deploy xLeashBoneDistributor
-    const xLeashBoneDistributor = await ethers.getContractFactory('xLeashBoneDistributor');
-    const xleashBoneDistributor = await xLeashBoneDistributor.deploy(boneToken.address);
+    // console.log(`xshibBoneDistributor contract address: ${xshibBoneDistributor.address}`);
+    // sleep(10000);
+    // // deploy xLeashBoneDistributor
+    // const xLeashBoneDistributor = await ethers.getContractFactory('xLeashBoneDistributor');
+    // const xleashBoneDistributor = await xLeashBoneDistributor.deploy(boneToken.address);
 
-    console.log(`xleashBoneDistributor contract address: ${xleashBoneDistributor.address}`);
-    sleep(10000);
-    // deploy boneLocker
-    const BoneLocker = await ethers.getContractFactory('BoneLocker');
-    const boneLocker = await BoneLocker.deploy(boneToken.address, devAddr.address, lockingPeriodInBoneLocker, devLockingPeriodInBoneLocker);
-    console.log(`BoneLocker contract address: ${boneLocker.address}`);
-    sleep(10000);
+    // console.log(`xleashBoneDistributor contract address: ${xleashBoneDistributor.address}`);
+    // sleep(10000);
+    // // deploy boneLocker
+    // const BoneLocker = await ethers.getContractFactory('BoneLocker');
+    // const boneLocker = await BoneLocker.deploy(boneToken.address, devAddr.address, lockingPeriodInBoneLocker, devLockingPeriodInBoneLocker);
+    // console.log(`BoneLocker contract address: ${boneLocker.address}`);
+    // sleep(10000);
     // deploy devBoneDistributor
     const DevBoneDistributor = await ethers.getContractFactory('DevBoneDistributor');
     const devBoneDistributor = await DevBoneDistributor.deploy(boneToken.address,
@@ -104,9 +104,9 @@ async function main() {
     const topDog = await TopDog.deploy(boneToken.address,
         boneLocker.address,
         devBoneDistributor.address,
-        tboneBoneDistributor.address,
-        xshibBoneDistributor.address,
-        xleashBoneDistributor.address,
+        // tboneBoneDistributor.address,
+        // xshibBoneDistributor.address,
+        // xleashBoneDistributor.address,
         bonePerBlock,
         startBlock,
         bonusEndBlock);
@@ -128,8 +128,8 @@ async function main() {
     //     contract: "contracts/BuryBone.sol:BuryBone",
     //     address: buryBone.address
     // });
-    console.log("Verified BuryBone")
-    sleep(10000);
+    // console.log("Verified BuryBone")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     constructorArguments: [
@@ -138,8 +138,8 @@ async function main() {
     //     contract: "contracts/BuryLeash.sol:BuryLeash",
     //     address: buryLeash.address
     // });
-    console.log("Verified BuryLeash")
-    sleep(10000);
+    // console.log("Verified BuryLeash")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     constructorArguments: [
@@ -148,8 +148,8 @@ async function main() {
     //     contract: "contracts/BuryShib.sol:BuryShib",
     //     address: buryShib.address
     // });
-    console.log("Verified BuryShib")
-    sleep(10000);
+    // console.log("Verified BuryShib")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     contract: "contracts/SwapRewardDistributor.sol:SwapRewardDistributor",
@@ -185,8 +185,8 @@ async function main() {
     //     address: tboneBoneDistributor.address
     // });
 
-    console.log("Verified tBoneBoneDistributor")
-    sleep(10000);
+    // console.log("Verified tBoneBoneDistributor")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     constructorArguments: [
@@ -196,8 +196,8 @@ async function main() {
     //     address: xshibBoneDistributor.address
     // });
 
-    console.log("Verified xShibBoneDistributor")
-    sleep(10000);
+    // console.log("Verified xShibBoneDistributor")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     constructorArguments: [
@@ -207,8 +207,8 @@ async function main() {
     //     address: xleashBoneDistributor.address
     // });
 
-    console.log("Verified xLeashBoneDistributor")
-    sleep(10000);
+    // console.log("Verified xLeashBoneDistributor")
+    // sleep(10000);
 
     // await run("verify:verify", {
     //     constructorArguments: [
